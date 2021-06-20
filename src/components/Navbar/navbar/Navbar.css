@@ -15,12 +15,10 @@
 }
 
 @media screen and (max-width: 960px){
-    .Nav{
-        transition: 0.8s all ease;
-    }
+  .Nav{
+      transition: 0.8s all ease;
+  }
 }
-  
-
 
 .NavbarContainer{
   display: flex;
@@ -52,12 +50,6 @@
   margin-right: 7px;
   border-radius: 50%;
   /* border: 2px solid #5A6AF0; */
-  animation: loader 8s infinite linear;
-}
-@keyframes loader {
-  100% {
-      transform: rotate(360deg);
-  }
 }
 
 .MobileIcon{
