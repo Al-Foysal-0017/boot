@@ -9,15 +9,16 @@ import { ImSun } from "react-icons/im";
 import ReactLanguageSelect from 'react-languages-select';
 import 'react-languages-select/css/react-languages-select.css';
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggle, darkMode}) => {
     const {pathname} = useLocation();
+    // const darkMode = false
     return (
         <>
-         <div className="Nav">
+         <div className="Nav" style={{backgroundColor: darkMode ? "#323742" : "#fff"}}>
              <div className="NavbarContainer">
                  <div className="NavLogo">
                  <div><img src={LogoImg} className="logoImg" alt="" /></div>
-                 <div to='/'>Boot</div>
+                 <div to='/' style={{color: darkMode ? "#ffffff" : "#323742"}}>Boot</div>
                  </div>
                  <div className="MobileIcon" onClick={toggle} > 
                      <FaBars />
@@ -26,42 +27,42 @@ const Navbar = ({toggle}) => {
                  <div className="NavMenu">
                     {pathname === "/" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/" >Swap</Link>
+                    <Link className="NavLinks NavLinksActive" to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>Swap</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/" >Swap</Link>
+                        <Link className="NavLinks" to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>Swap</Link>
                     </div>
                     }
 
                     {pathname === "/pools" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/pools" >Pools</Link>
+                    <Link className="NavLinks NavLinksActive" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>Pools</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/pools" >Pools</Link>
+                        <Link className="NavLinks" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>Pools</Link>
                     </div>
                     }
 
                     {pathname === "/governance" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/governance" >Governance</Link>
+                    <Link className="NavLinks NavLinksActive" to="/governance" style={{color: darkMode ? "#ffffff" : "#323742"}}>Governance</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/governance" >Governance</Link>
+                        <Link className="NavLinks" to="/governance" style={{color: darkMode ? "#ffffff" : "#323742"}}>Governance</Link>
                     </div>
                     }
 
 
                     {pathname === "/more" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/more" >More</Link>
+                    <Link className="NavLinks NavLinksActive" to="/more" style={{color: darkMode ? "#ffffff" : "#323742"}}>More</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/more" >More</Link>
+                        <Link className="NavLinks" to="/more" style={{color: darkMode ? "#ffffff" : "#323742"}}>More</Link>
                     </div>
                     }   
                  </div>

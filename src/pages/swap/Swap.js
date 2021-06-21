@@ -1,12 +1,42 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
-import Hero from '../../components/HeroSection/Hero'
+import "./Swap.css"
 
-const Swap = () => {
+const Swap = ({darkMode}) => {
+    // const  darkMode= false
     return (
         <div>
             <Navbar/>
-            <Hero Content={"SWAP"}/>
+            <div className="container" style={{backgroundColor: darkMode ? "#23252A" : "#F7F8FD"}}>
+                <div className="containerLeft"></div>
+                
+                <div className="containerCenter">
+                   <div className="containerCenterHeader" style={{color: darkMode ? "#ffffff" : "#323742"}}>Swap Using Pools</div>
+                   
+                   <div className="boxContainer" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                    <div className="boxContainerLeft" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                        {/* LEFT */}
+                    </div>
+                    <div className="boxContainerRight" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                    {/* RIGHT */}
+                    </div>
+                    
+                   </div>
+
+                   {/* <div className="footer"> */}
+                       <div className="footerBox" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                           <div className="footerBoxLeft">DAI/USDC &nbsp;</div>
+                           <div className="footerBoxCenter" style={{color:"#A3B7A7"}}>Exchance rate &nbsp;</div>
+                           <div className="footerBoxRight">1.0433</div>
+                       </div>
+                       <div className="footerText">
+                           Infinite approval - trust this contact forever
+                       </div>
+                        <button className="footerButton">Swap</button>
+                   {/* </div> */}
+                </div>
+                <div className="containerRight"></div>
+            </div>
         </div>
     )
 }

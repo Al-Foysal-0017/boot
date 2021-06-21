@@ -1,8 +1,8 @@
 
 .Nav{
   /* background: #000; */
-  background: #ffffff;
-  height: 80px;
+  /* background: #ffffff; */
+  height: 60px;
   /* margin-top: -80px;  */
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   z-index: 1;
   width: 100%;
   padding:0 24px;
@@ -85,12 +85,12 @@
 }
 
 .NavItem{
-  height: 80px;
+  height: 60px;
 }
 
 .NavLinks{
   /* color: #fff; */
-  color: #000;
+  /* color: #000; */
   display: flex;
   align-items: center;
   text-decoration: none;

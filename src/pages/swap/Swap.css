@@ -1,0 +1,131 @@
+.container{
+    display: flex;
+    /* background: #F7F8FD; */
+    /* background: #000; */
+    height: calc(100vh - 65px);
+    /* height: 100vh; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.containerLeft{
+    flex: 2;
+}
+
+.containerCenter{
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+}
+
+.containerCenterHeader{
+    display: flex;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #323742;
+}
+
+.boxContainer{
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 800px;
+    /* background-color: #000; */
+    border-radius: 25px;
+    border: 0.5px solid #D8D8D8;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+}
+.boxContainerLeft{
+    height: 100%;
+    max-height: 399px;
+    width: 100%;
+    max-width: 400px;
+    /* background-color: #ffffff; */
+    border-radius: 25px;
+    border: 0.5px solid #D8D8D8;
+    /* border: 0.5px solid rgba(0, 0, 0, 0.4); */
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+.boxContainerRight{
+    height: 100%;
+    max-height: 398px;
+    width: 100%;
+    max-width: 400px;
+    /* background-color: #ffffff; */
+    border-radius: 25px;
+}
+.footer{}
+.footerBox{
+    height: 60px;
+    width: 800px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 25px;
+    margin-top: 10px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+.footerText{
+    font-size: 12px;
+    font-weight: 200;
+    color: gray;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.footerButton{
+    border-radius: 50px;
+    white-space: nowrap;
+    /* padding: 16px 64px; */
+    padding: 8px 60px 8px 60px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: #fff;
+    background: #5A6AF0;
+  }
+.footerButton:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #5A6AF0;
+    border: 1px solid #5A6AF0;
+  }
+.containerRight{
+    flex: 2;
+}
+
+
+/* 
+@media screen and (max-width: 768px){
+    .containerLeft{
+        flex: 0;
+    }
+    .containerCenter{
+        flex: 12;
+    }
+    .containerRight{
+        flex: 0;
+    }
+} */
+
+@media screen and (max-width: 480px){
+    .HeroP{
+    font-size: 32px;
+    }
+}
