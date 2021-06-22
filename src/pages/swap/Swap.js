@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import "./Swap.css"
+var store = require('store')
 
-const Swap = ({darkMode}) => {
+const Swap = () => {
     // const  darkMode= false
+    const darkMode = store.get('darkMode') ? true : false
+
+    useEffect(()=>{},[darkMode])
     return (
         <div>
             <Navbar/>

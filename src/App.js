@@ -9,7 +9,7 @@ import GovernanceInfo from "./pages/governance/GovernanceInfo";
 import PoolAddLiquidity from "./pages/pools/Pools_Add_Liquidity";
 import PoolRemoveLiquidity from "./pages/pools/Pools_Remove_Liquidity";
 import PoolSwap from "./pages/pools/Pools_Swap";
-import PoolLooking from "./pages/pools/Pools_Looking";
+import PoolLocking from "./pages/pools/Pools_Looking";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
        <Route path="/pools/add-liquidity" component={PoolAddLiquidity} exact />
        <Route path="/pools/remove-liquidity" component={PoolRemoveLiquidity} exact />
        <Route path="/pools/swap" component={PoolSwap} exact />
-       <Route path="/pools/looking" component={PoolLooking} exact />
+       <Route path="/pools/locking" component={PoolLocking} exact />
        <Route path="/governance" component={Governance} exact />
        <Route path="/governance-info" component={GovernanceInfo} exact />
        <Route path="/more" component={More} exact />

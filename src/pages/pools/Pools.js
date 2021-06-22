@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import Hero from '../../components/HeroSection/Hero'
 import "./Pools.css"
 import { Link } from 'react-router-dom'
 import { BiChevronRightCircle } from "react-icons/bi";
+var store = require('store')
 
 
 const Pools = () => {
-        const darkMode = false
+        const darkMode = store.get('darkMode') ? true : false
+        // const darkMode = localStorage.getItem('darkMode') 
+        // console.log(localStorage.getItem('darkMode'))
     return (
         <div>
             <Navbar/>
@@ -19,7 +22,7 @@ const Pools = () => {
                    
                    <div className="boxContainerPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                     
-                    <dv className="boxContainerTopHeaderPools">
+                    <div className="boxContainerTopHeaderPools">
                         <div className="boxContainerTopHeaderPools1">Pool</div>
                         <div className="boxContainerTopHeaderPools2">Underlying Tokens</div>
                         <div className="boxContainerTopHeaderPools3">Value Locked</div>
@@ -27,7 +30,7 @@ const Pools = () => {
                         <div className="boxContainerTopHeaderPools5">Pool APY</div>
                         <div className="boxContainerTopHeaderPools6">BOOT APY</div>
                         <div className="boxContainerTopHeaderPools7"></div>
-                    </dv>
+                    </div>
                     
                     <div className="boxContainerTopPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                         <div className="boxContainerPoolsColumn1"></div>

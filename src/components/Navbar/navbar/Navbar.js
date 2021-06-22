@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import {FaBars} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import {useLocation} from 'react-router-dom'
 import LogoImg from "../../../images/logo1.png"
-// import { FaRegMoon } from "react-icons/fa";
+import { FaRegMoon } from "react-icons/fa";
 import { ImSun } from "react-icons/im";
 import ReactLanguageSelect from 'react-languages-select';
 import 'react-languages-select/css/react-languages-select.css';
 
-const Navbar = ({toggle, darkMode}) => {
+const Navbar = ({toggle}) => {
     const {pathname} = useLocation();
-    // const darkMode = false
+    
+    const darkMode = false
+
+    const handleDarkMode = () => {}
     return (
         <>
          <div className="Nav" style={{backgroundColor: darkMode ? "#323742" : "#fff"}}>
@@ -35,7 +38,7 @@ const Navbar = ({toggle, darkMode}) => {
                     </div>
                     }
 
-                    {pathname === "/pools" ?
+                    {pathname === "/pools" || pathname === "/pools/swap" || pathname === "/pools/locking" || pathname === "/pools/add-liquidity" || pathname === "/pools/remove-liquidity" ?
                     <div className="NavItem">
                     <Link className="NavLinks NavLinksActive" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>Pools</Link>
                     </div>
@@ -77,7 +80,15 @@ const Navbar = ({toggle, darkMode}) => {
                     selectedSize={12}
                     optionsSize={12}
                  />
-                 <div className="ModeSet"><ImSun/></div>
+                 {/* <div className="ModeSet"><ImSun/></div> */}
+                 {/* <DarkMode/> */}
+                    <div 
+                    className="ModeSet"
+                    onClick={handleDarkMode}
+                    >
+                    {darkMode? <ImSun/>: <FaRegMoon/>}    
+                    </div>
+
                  <div >
                        <Link to="/connect-wallet" className="NavBtnLink">Connect Wallet</Link>                     
                  </div>
