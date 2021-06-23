@@ -5,9 +5,9 @@ var store = require('store')
 
 const Swap = () => {
     // const  darkMode= false
-    const darkMode = store.get('darkMode') ? true : false
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark'
 
-    useEffect(()=>{},[darkMode])
+    // useEffect(()=>{},[darkMode])
     return (
         <div>
             <Navbar/>
@@ -29,9 +29,9 @@ const Swap = () => {
 
                    {/* <div className="footer"> */}
                        <div className="footerBox" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                           <div className="footerBoxLeft">DAI/USDC &nbsp;</div>
+                           <div className="footerBoxLeft" style={{color: darkMode ? "#fff" : "#323742"}}>DAI/USDC &nbsp;</div>
                            <div className="footerBoxCenter" style={{color:"#A3B7A7"}}>Exchance rate &nbsp;</div>
-                           <div className="footerBoxRight">1.0433</div>
+                           <div className="footerBoxRight" style={{color: darkMode ? "#fff" : "#323742"}}>1.0433</div>
                        </div>
                        <div className="footerText">
                            Infinite approval - trust this contact forever

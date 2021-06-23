@@ -4,23 +4,44 @@ import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import {useLocation} from 'react-router-dom'
 import LogoImg from "../../../images/logo1.png"
+import LogoImgDark from "../../../images/logoDark.png"
 import { FaRegMoon } from "react-icons/fa";
 import { ImSun } from "react-icons/im";
 import ReactLanguageSelect from 'react-languages-select';
 import 'react-languages-select/css/react-languages-select.css';
+import DarkMode from '../../DarkMode/DarkMode'
 
 const Navbar = ({toggle}) => {
     const {pathname} = useLocation();
     
-    const darkMode = false
+    // const [darkMode, setDarkMode1] = useState(localStorage.getItem('theme')=== 'theme-dark' || null)
+    // const [darkMode, setDarkMode] = useState(localStorage.getItem('theme')=== 'theme-dark')
 
-    const handleDarkMode = () => {}
+     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
+    
+    //  const HandlDarkMode = () => {
+    //      if(localStorage.getItem('theme')=== 'theme-dark'){
+    //          setDarkMode1(false)
+    //      }
+    //      if(localStorage.getItem('theme')=== 'theme-light'){
+    //          setDarkMode1(true)
+    //      }
+    //  }
+    
+    //  useEffect(()=>{
+    //     HandlDarkMode()
+    //  },[darkMode, setDarkMode1])
+
     return (
         <>
          <div className="Nav" style={{backgroundColor: darkMode ? "#323742" : "#fff"}}>
              <div className="NavbarContainer">
                  <div className="NavLogo">
-                 <div><img src={LogoImg} className="logoImg" alt="" /></div>
+                 <div>
+                     {darkMode?
+                     <img src={LogoImgDark} className="logoImg" alt="" />:
+                     <img src={LogoImg} className="logoImg" alt="" />}
+                </div>
                  <div to='/' style={{color: darkMode ? "#ffffff" : "#323742"}}>Boot</div>
                  </div>
                  <div className="MobileIcon" onClick={toggle} > 
@@ -71,7 +92,8 @@ const Navbar = ({toggle}) => {
                  </div>
                  
                  <div className="NavBtn">
-                 <ReactLanguageSelect
+                 
+                 {/* <ReactLanguageSelect
                     className="LanguageSet"
                     defaultLanguage="en" 
                     languages={["en", "fr", "de"]}
@@ -80,17 +102,15 @@ const Navbar = ({toggle}) => {
                     selectedSize={12}
                     optionsSize={12}
                  />
-                 {/* <div className="ModeSet"><ImSun/></div> */}
-                 {/* <DarkMode/> */}
-                    <div 
-                    className="ModeSet"
-                    onClick={handleDarkMode}
-                    >
-                    {darkMode? <ImSun/>: <FaRegMoon/>}    
-                    </div>
+                  */}
+
+                    <DarkMode/>
 
                  <div >
-                       <Link to="/connect-wallet" className="NavBtnLink">Connect Wallet</Link>                     
+                     {darkMode? 
+                     <Link to="/connect-wallet" className="NavBtnLinkDark">Connect Wallet</Link>
+                       :
+                    <Link to="/connect-wallet" className="NavBtnLink">Connect Wallet</Link> }                    
                  </div>
                  </div>
                  

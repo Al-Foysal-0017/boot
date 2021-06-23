@@ -4,11 +4,11 @@ import Hero from '../../components/HeroSection/Hero'
 import "./Pools.css"
 import { Link } from 'react-router-dom'
 import { BiChevronRightCircle } from "react-icons/bi";
-var store = require('store')
+
 
 
 const Pools = () => {
-        const darkMode = store.get('darkMode') ? true : false
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark'
         // const darkMode = localStorage.getItem('darkMode') 
         // console.log(localStorage.getItem('darkMode'))
     return (
@@ -23,13 +23,13 @@ const Pools = () => {
                    <div className="boxContainerPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                     
                     <div className="boxContainerTopHeaderPools">
-                        <div className="boxContainerTopHeaderPools1">Pool</div>
-                        <div className="boxContainerTopHeaderPools2">Underlying Tokens</div>
-                        <div className="boxContainerTopHeaderPools3">Value Locked</div>
-                        <div className="boxContainerTopHeaderPools4">Daily Value</div>
-                        <div className="boxContainerTopHeaderPools5">Pool APY</div>
-                        <div className="boxContainerTopHeaderPools6">BOOT APY</div>
-                        <div className="boxContainerTopHeaderPools7"></div>
+                        <div className="boxContainerTopHeaderPools1" style={{color: darkMode ? "#fff" : "#323742"}}>Pool</div>
+                        <div className="boxContainerTopHeaderPools2" style={{color: darkMode ? "#fff" : "#323742"}}>Underlying Tokens</div>
+                        <div className="boxContainerTopHeaderPools3" style={{color: darkMode ? "#fff" : "#323742"}}>Value Locked</div>
+                        <div className="boxContainerTopHeaderPools4" style={{color: darkMode ? "#fff" : "#323742"}}>Daily Value</div>
+                        <div className="boxContainerTopHeaderPools5" style={{color: darkMode ? "#fff" : "#323742"}}>Pool APY</div>
+                        <div className="boxContainerTopHeaderPools6" style={{color: darkMode ? "#fff" : "#323742"}}>BOOT APY</div>
+                        <div className="boxContainerTopHeaderPools7" style={{color: darkMode ? "#fff" : "#323742"}}></div>
                     </div>
                     
                     <div className="boxContainerTopPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
@@ -54,11 +54,11 @@ const Pools = () => {
                     <div className="footer">
                     <div style={{display:"flex", flex:"10.5"}}></div>
                     <div style={{display:"flex", flex:"1.5"}} className="footerRight">
-                        <span className="footerRight1">1</span>
-                        <span className="footerRight2">2</span>
+                        <span className="footerRight1" style={{color: darkMode ? "#fff" : "#5A6AF0"}}>1</span>
+                        <span className="footerRight2" style={{color: darkMode ? "#fff" : "#5A6AF0"}}>2</span>
                         <span style={{paddingRight:"20px", cursor: "pointer"}}>
                             <Link to="/pools/add-liquidity">
-                            <BiChevronRightCircle fontSize="25px"/>
+                            <BiChevronRightCircle style={{color: darkMode ? "#fff" : "#5A6AF0"}} fontSize="25px"/>
                             </Link>
                         </span>
                     </div>

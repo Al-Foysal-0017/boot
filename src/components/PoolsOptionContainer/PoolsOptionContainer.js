@@ -5,16 +5,35 @@ import "./PoolsOptionContainer.css"
 import DAIimage from "../../images/DAIimage.png"
 import USDCimage from "../../images/USDCimage.jpeg" 
 import {useLocation} from 'react-router-dom'
+// import DAIimage from "../../images/DAIimage.png"
+import { userData } from "../../dummyData";
+import Chart from '../PoolsComponent/Chart';
+import { AiOutlineLeft } from "react-icons/ai";
+  
 
-const PoolsOptionContainer = ({darkMode}) => {
+const PoolsOptionContainer = ({ title, data, dataKey, grid }) => {
     const {pathname} = useLocation();
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark'
     return (
         <div>
             <div className="containerPoolsOption" style={{backgroundColor: darkMode ? "#23252A" : "#F7F8FD"}}>
                 <div className="containerLeftPoolsOption"></div>
                 
                 <div className="containerCenterPoolsOption">
-                   <div className="containerCenterHeaderPoolsOption" style={{color: darkMode ? "#ffffff" : "#323742"}}>Details</div>
+                    <div className="containerCenterHeaderPoolsOptionBox">
+                        
+                        <div className="containerCenterHeaderPoolsOptionBoxLeft"> 
+                            <div className="BackLinkSpan">
+                                <Link to="/pools" className="BackLink">
+                                <AiOutlineLeft style={{paddingTop:"4px"}}/>
+                                 Back
+                                </Link>
+                            </div>
+                        </div>                
+                        <div className="containerCenterHeaderPoolsOptionCenter" style={{color: darkMode ? "#ffffff" : "#323742"}}>Details</div>
+                        <div className="containerCenterHeaderPoolsOptionBoxRight"></div>
+                        
+                    </div>
                    
                    <div className="boxContainerPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                     
@@ -59,15 +78,14 @@ const PoolsOptionContainer = ({darkMode}) => {
                                 <span style={{paddingLeft:"8px", fontSize:"14px"}}>$4,534,375.88</span>
                             </div>
                         </div>
-                        <div className="boxContainerLeftPoolsOptionBottom"></div>
+                        <div className="boxContainerLeftPoolsOptionBottom">
+                      
+                        <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
+                        </div>
                     </div>
                     <div className="boxContainerRightPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                         <div className="boxContainerRightPoolsOptionTop">
-                            
-                            
-                            
-                            
-
+                            <div className="boxContainerRightPoolsOptionTopLink">
                             {pathname==="/pools/add-liquidity" ?
                               <Link to="/pools/add-liquidity">
                                   <button style={{background:"#5A6AF0", color:"#fff"}} className="boxContainerRightPoolsOptionTopButton">Add Liquidity</button>
@@ -104,24 +122,74 @@ const PoolsOptionContainer = ({darkMode}) => {
                                    <button className="boxContainerRightPoolsOptionTopButton">Locking</button>
                                </Link>
                             }
+                            </div>
                         </div>
-                        <div className="boxContainerRightPoolsOptionCenter"></div>
-                        <div className="boxContainerRightPoolsOptionBottom">
-                            {/* <div className="boxContainerRightPoolsOptionBottomBox"></div> */}
-                        </div>
+                        <div className="boxContainerRightPoolsOptionCenter">
+                            <div className="boxContainerRightPoolsOptionCenterHeader">Currencies</div>
+                            
+                            <div className="boxContainerRightPoolsOptionCenterList">
+                                <div className="boxContainerRightPoolsOptionCenterListItem">
+                                    <span>100.00</span>
+                                    <span style={{ display:"flex" ,justifyContent:"center"}}>
+                                        <span style={{paddingRight:"7px"}}>Max</span>
+                                        <span><img src={DAIimage} className="currencyImage" alt=""/></span>
+                                        <span style={{paddingLeft:"4px"}}>DAI</span>
+                                    </span>
+                                    <span>
+                                        <div>Balance</div>
+                                        <div>52045.003</div>
+                                    </span>
+                                </div>
+                                <div className="boxContainerRightPoolsOptionCenterListItem">
+                                    <span>100.00</span>
+                                    <span style={{ display:"flex" ,justifyContent:"center"}}>
+                                        <span style={{paddingRight:"7px"}}>Max</span>
+                                        <span><img src={DAIimage} className="currencyImage" alt=""/></span>
+                                        <span style={{paddingLeft:"4px"}}>DAI</span>
+                                    </span>
+                                    <span>
+                                        <div>Balance</div>
+                                        <div>52045.003</div>
+                                    </span>
+                                </div>
+                                <div className="boxContainerRightPoolsOptionCenterListItem">
+                                    <span>100.00</span>
+                                    <span style={{ display:"flex" ,justifyContent:"center"}}>
+                                        <span style={{paddingRight:"7px"}}>Max</span>
+                                        <span><img src={DAIimage} className="currencyImage" alt=""/></span>
+                                        <span style={{paddingLeft:"4px"}}>DAI</span>
+                                    </span>
+                                    <span>
+                                        <div>Balance</div>
+                                        <div>52045.003</div>
+                                    </span>
+                                </div>
+                                <div className="boxContainerRightPoolsOptionCenterListItem">
+                                    <span>100.00</span>
+                                    <span style={{ display:"flex" ,justifyContent:"center"}}>
+                                        <span style={{paddingRight:"7px"}}>Max</span>
+                                        <span><img src={DAIimage} className="currencyImage" alt=""/></span>
+                                        <span style={{paddingLeft:"4px"}}>DAI</span>
+                                    </span>
+                                    <span>
+                                        <div>Balance</div>
+                                        <div>52045.003</div>
+                                    </span>
+                                </div>
+                            </div>
 
-                        {/* <div className="footerPoolsOption">
-                        <div style={{display:"flex", flex:"10.5"}}></div>
-                        <div style={{display:"flex", flex:"1.5"}} className="footerRightPoolsOption">
-                        <span className="footerRight1PoolsOption">1</span>
-                        <span className="footerRight2PoolsOption">2</span>
-                        <span style={{paddingRight:"20px", cursor: "pointer"}}>
-                            <Link to="/governance-info">
-                            <BiChevronRightCircle fontSize="25px"/>
-                            </Link>
-                        </span>
+                           {/* <div className="footerPoolOption"> */}
+                          
+                           {/* <div className="footerPoolOptionButton">Add Liquidity</div> */}
+                           {/* </div> */}
+                            
                         </div>
-                        </div> */}
+                        <div className="boxContainerRightPoolsOptionBottom">
+                        <div className="footerPoolOptionText">
+                           Infinite approval - trust this contact forever
+                           </div>
+                           <button className="footerPoolOptionButton">Add Liquidity</button>
+                        </div>
                     </div>
                     
                    </div>

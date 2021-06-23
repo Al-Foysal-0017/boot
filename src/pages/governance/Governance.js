@@ -4,7 +4,8 @@ import { BiChevronRightCircle } from "react-icons/bi";
 import "./Governance.css"
 import { Link } from 'react-router-dom';
 
-const Governance = ({darkMode}) => {
+const Governance = () => {
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark'
     return (
         <div>
             <Navbar/>
@@ -25,17 +26,17 @@ const Governance = ({darkMode}) => {
                         <div className="boxContainerRightGovTop"></div>
                         <div className="boxContainerRightGovCenter"></div>
                         <div className="boxContainerRightGovBottom">
-                            <div className="boxContainerRightGovBottomBox"></div>
+                            <div className="boxContainerRightGovBottomBox" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}></div>
                         </div>
 
                         <div className="footerGov">
                         <div style={{display:"flex", flex:"10.5"}}></div>
                         <div style={{display:"flex", flex:"1.5"}} className="footerRightGov">
-                        <span className="footerRight1Gov">1</span>
-                        <span className="footerRight2Gov">2</span>
+                        <span className="footerRight1Gov" style={{color: darkMode ? "#fff" : "#5A6AF0"}}>1</span>
+                        <span className="footerRight2Gov" style={{color: darkMode ? "#fff" : "#5A6AF0"}}>2</span>
                         <span style={{paddingRight:"20px", cursor: "pointer"}}>
                             <Link to="/governance-info">
-                            <BiChevronRightCircle fontSize="25px"/>
+                            <BiChevronRightCircle style={{color: darkMode ? "#fff" : "#5A6AF0"}} fontSize="25px"/>
                             </Link>
                         </span>
                     </div>
