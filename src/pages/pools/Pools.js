@@ -1,16 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from '../../components/Navbar'
-import Hero from '../../components/HeroSection/Hero'
 import "./Pools.css"
 import { Link } from 'react-router-dom'
 import { BiChevronRightCircle } from "react-icons/bi";
-
+import CurrencyName from '../../components/PoolsComponent/CurrencyName';
+import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
+import DAIimage from "../../images/DAIimage.png"
 
 
 const Pools = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
-        // const darkMode = localStorage.getItem('darkMode') 
-        // console.log(localStorage.getItem('darkMode'))
     return (
         <div>
             <Navbar/>
@@ -33,22 +32,62 @@ const Pools = () => {
                     </div>
                     
                     <div className="boxContainerTopPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerPoolsColumn1"></div>
-                        <div className="boxContainerPoolsColumn2"></div>
-                        <div className="boxContainerPoolsColumn3"></div>
-                        <div className="boxContainerPoolsColumn4"></div>
-                        <div className="boxContainerPoolsColumn5"></div>
-                        <div className="boxContainerPoolsColumn6"></div>
-                        <div className="boxContainerPoolsColumn7"></div>
+                        <div className="boxContainerPoolsColumn1">
+                            <CurrencyName/>
+                        </div>
+                        <div className="boxContainerPoolsColumn2">
+                            <UnderlyingTokens/>
+                        </div>
+                        <div className="boxContainerPoolsColumn3" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            4,534,375.88
+                        </div>
+                        <div className="boxContainerPoolsColumn4" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            $4,534,375.88
+                        </div>
+                        <div className="boxContainerPoolsColumn5" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            1.98%
+                        </div>
+                        <div className="boxContainerPoolsColumn6" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            1.98%
+                        </div>
+                        <div className="boxContainerPoolsColumn7">
+                            <Link to="/pools/add-liquidity">
+                            <button className="boxContainerPoolsColumn7Button">Details</button>
+                            </Link>
+                        </div>
                     </div>
                     <div className="boxContainerBottomPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerPoolsColumn1"></div>
-                        <div className="boxContainerPoolsColumn2"></div>
-                        <div className="boxContainerPoolsColumn3"></div>
-                        <div className="boxContainerPoolsColumn4"></div>
-                        <div className="boxContainerPoolsColumn5"></div>
-                        <div className="boxContainerPoolsColumn6"></div>
-                        <div className="boxContainerPoolsColumn7"></div>
+                        <div className="boxContainerPoolsColumn1">
+                            <button className="boxContainerLeftPoolsOptionTopButton" style={{color: darkMode ? "#fff" : "#5A6AF0", backgroundColor: darkMode ? "#5A6AF0" : "#fff"}}>WETH</button>
+                            <button className="boxContainerLeftPoolsOptionTopButton" style={{color: darkMode ? "#fff" : "#5A6AF0", backgroundColor: darkMode ? "#5A6AF0" : "#fff"}}>SETH</button>
+                        </div>
+                        <div className="boxContainerPoolsColumn2">
+                            <div style={{display:"flex", textAlign:"center"}}>
+                                <span><img src={DAIimage} className="currencyImage" alt="DAI"/></span>
+                                <span className="boxContainerPoolsColumn2Value" style={{color: darkMode ? "#fff" : "#323742"}}>$4,534,375.88</span>
+                            </div>
+                            <div style={{display:"flex", textAlign:"center"}}>
+                                <span><img src={DAIimage} className="currencyImage" alt="DAI"/></span>
+                                <span className="boxContainerPoolsColumn2Value" style={{color: darkMode ? "#fff" : "#323742"}}>$4,534,375.88</span>
+                            </div>
+                        </div>
+                        <div className="boxContainerPoolsColumn3" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            4,534,375.88
+                        </div>
+                        <div className="boxContainerPoolsColumn4" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            $4,534,375.88
+                        </div>
+                        <div className="boxContainerPoolsColumn5" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            1.98%
+                        </div>
+                        <div className="boxContainerPoolsColumn6" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            1.98%
+                        </div>
+                        <div className="boxContainerPoolsColumn7" style={{color: darkMode ? "#fff" : "#323742"}}>
+                            <Link to="/pools/add-liquidity">
+                            <button className="boxContainerPoolsColumn7Button">Details</button>
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="footer">

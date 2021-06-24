@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import '../styles/toggle.css';
+import "./DarkMode.css"
 import { setTheme } from './Themes';
 import { FaRegMoon } from "react-icons/fa";
 import { ImSun } from "react-icons/im";
@@ -33,11 +33,11 @@ export default function DarkMode() {
         <div className="ModeSet">
                     {togClass === "light" ? 
                     <FaRegMoon onClick={handleOnClick}
-                    style={{background:"#fff"}}
+                    className="FaRegMoon"
                     />
                     : 
                     <ImSun 
-                    style={{background:"#323842"}}
+                    className="ImSun"
                     onClick={handleOnClick}/>}    
         </div>
 
