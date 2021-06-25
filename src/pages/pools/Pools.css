@@ -1,6 +1,7 @@
 .containerPools{
     display: flex;
-    height: calc(100vh - 65px);
+    /* height: calc(100vh - 65px); */
+    height: 100vh;
 }
 
 .containerLeftPools{

@@ -1,6 +1,6 @@
 .containerPoolsOption{
     display: flex;
-    height: 100vh;
+    height: 110vh;
 }
 
 .containerLeftPoolsOption{
@@ -144,26 +144,35 @@
     padding-top: 30px;
     padding-left: 25px;
 }
-.boxContainerRightPoolsOptionTopLink{
+/* .boxContainerRightPoolsOptionTopLink{
     border: 1px solid #d8d9dd;
     display: inline-block;
     border-radius: 5px;
-}
+} */
 .boxContainerRightPoolsOptionTopButton{
+    border-radius: 5px;
     border: 1px solid #d8d9dd;
-    padding: 8px 20px 8px 20px;
+    padding: 10px 25px 10px 25px;
     background: #fff;
+    margin-right: 2px;
     cursor: pointer;
+    margin-top: 12px;
 }
 .boxContainerRightPoolsOptionCenter{
     flex: 4;
     max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 70%;
+    max-width: 550px;
 }
 .boxContainerRightPoolsOptionCenterHeader{
     font-size: 20px;
     font-weight: bold;
     color: #5A6AF0;
-    padding-left: 25px;
+    padding-left: 30px;
     margin-top: 10px;
 }
 .boxContainerRightPoolsOptionCenterList{
@@ -178,12 +187,12 @@
     flex-direction: row;
     justify-content: space-around;
     border: 1px solid #d8d9dd;
-    padding: 5px;
+    padding: 8px;
     align-items: center;
     text-align: center;
     font-size: 12px;
     border-radius: 15px;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     max-width: 450px;
     margin-left: 20px;
 }
@@ -258,8 +267,9 @@
 .footerPoolOptionButton{
     border-radius: 50px;
     white-space: nowrap;
-    padding: 8px 30px 8px 30px;
-    font-size: 14px;
+    padding: 10px 30px 10px 30px;
+    font-size: 15px;
+    font-weight: bold;
     outline: none;
     border: none;
     cursor: pointer;
@@ -268,7 +278,7 @@
     color: #fff;
     background: #5A6AF0;
     cursor: pointer;
-    width: 150px;
+    width: 200px;
 }
 
 .footerPoolOptionButton:hover {

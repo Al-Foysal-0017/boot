@@ -10,6 +10,8 @@ import CurrencyName from '../../components/PoolsComponent/CurrencyName';
 import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
 import TotalValueLocked from '../../components/PoolsComponent/TotalValueLocked';
 import PoolTopbar from '../../components/PoolsComponent/PoolTopbar';
+import { BiCheckboxChecked } from "react-icons/bi";
+import { VscQuestion } from "react-icons/vsc";
 
 const Pools_Add_Liquidity = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
@@ -52,11 +54,11 @@ const Pools_Add_Liquidity = () => {
                     <div className="boxContainerRightPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                         <div className="boxContainerRightPoolsOptionTop">
                             <PoolTopbar/>
-                            
                         </div>
+
+
                         <div className="boxContainerRightPoolsOptionCenter">
                             <div className="boxContainerRightPoolsOptionCenterHeader">Currencies</div>
-                            
                             <div className="boxContainerRightPoolsOptionCenterList">
                                 <div className="boxContainerRightPoolsOptionCenterListItem">
                                     <span style={{color: darkMode ? "#ffffff" : "#323742"}}>100.00</span>
@@ -111,7 +113,15 @@ const Pools_Add_Liquidity = () => {
                         </div>
                         <div className="boxContainerRightPoolsOptionBottom">
                         <div className="footerPoolOptionText">
-                           Infinite approval - trust this contact forever
+                           {/* Infinite approval - trust this contact forever */}
+                           <span className="footerInfoIcon">
+                               <BiCheckboxChecked size="25px" style={{color:"#A3B7A7"}}/>
+                               Infinite approval - trust this contact forever
+                               <VscQuestion size="18px" style={{marginLeft:"5px", color:"gray"}}/>
+                            </span>
+
+
+
                            </div>
                            <button className="footerPoolOptionButton">Add Liquidity</button>
                         </div>

@@ -19,14 +19,69 @@ const Governance = () => {
                     
                    <div className="boxContainerGov" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                     <div className="boxContainerLeftGov" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerLeftGovTop"></div>
-                        <div className="boxContainerLeftGovBottom"></div>
+                        <div className="boxContainerLeftGovTop">
+                            <div className="HeaderOverview">Overview</div>
+                            <div className="overViewItems">
+                                <div className="overViewItem">
+                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow2">Total $BOOT vote-locked</div>
+                                </div>
+                                <div className="overViewItem">
+                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow2">Total $BOOT vote-locked</div>
+                                </div>
+                                <div className="overViewItem">
+                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow2">Total $BOOT vote-locked</div>
+                                </div>
+                                <div className="overViewItem">
+                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow2">Total $BOOT vote-locked</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="boxContainerLeftGovBottom">
+                            <div className="HeaderManageLocking">Manage Locking</div>
+                            <div className="ManageItems">
+                                <div className="ManageItem">
+                                    <div className="label">Add Lock</div>
+                                    <div className="setTwoBox">
+                                        <div className="setBox1">
+                                            <span>91.05</span>
+                                            <span>Max $BOOT</span>
+                                        </div>
+                                        <div className="setBox2">$BOOT Balance: <span>525.97</span></div>
+                                    </div>
+                                    <button className="GovButton">Add</button>
+                                </div>
+                                <div className="ManageItem">
+                                    <div className="label">Add Lock</div>
+                                    <div className="setTwoBox">
+                                        <div className="setBox1">
+                                            <span>91.05</span>
+                                            <span>Max $BOOT</span>
+                                        </div>
+                                        <div className="setBox2">$BOOT Balance: <span>525.97</span></div>
+                                    </div>
+                                    <button className="GovButton">Lock</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="boxContainerRightGov" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerRightGovTop"></div>
+                        <div className="boxContainerRightGovTop">
+                            Proposal 24
+                        </div>
                         <div className="boxContainerRightGovCenter"></div>
                         <div className="boxContainerRightGovBottom">
-                            <div className="boxContainerRightGovBottomBox" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}></div>
+                            <div className="boxContainerRightGovBottomBox" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                                <button>Active</button>
+                                <div>Pool proxy: Commit new parameters for 0x3292.F9f88d, A100, new ...</div>
+                                <div>
+                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                                </div>
+                                <div>05D:13H-33M:44S</div>
+                            </div>
                         </div>
 
                         <div className="footerGov">
