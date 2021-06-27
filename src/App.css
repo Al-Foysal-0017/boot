@@ -1,6 +1,24 @@
 *{
-  font-family: 'Encode Sans Expanded', sans-serif;
+  /* font-family: 'Encode Sans Expanded', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  letter-spacing: 0.5px;
 }
+
+
+
+.ui.form .field > label {
+  color:  #A3B7A7 !important;
+}
+
+.item{
+  display: flex!important;
+  flex-direction: row;
+}
+
+.ui.dropdown .menu>.item:first-child {
+  border-top-width: 0;
+}
+

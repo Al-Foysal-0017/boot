@@ -1,18 +1,21 @@
 import React from 'react'
 import DAIimage from "../../images/DAIimage.png"
 import "./SwapLeftValue.css"
+import { useTranslation } from 'react-i18next'
 
 const SwapLeftValue = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
+    const { t } = useTranslation()
+    // {t('Swap_Using_Pools')}
     return (
         <>
             <div className="boxContainerLeftTop">
                             <div className="boxContainerLeftTopHeader">
                                 <div className="boxContainerLeftTopHeaderLeft" style={{color: darkMode ? "#ffffff" : "#5A6AF0"}}>
-                                    From
+                                {t('From')}
                                 </div>
                                 <div className="boxContainerLeftTopHeaderRight">
-                                    <div style={{color:"#A3B7A7"}}>Balance</div>
+                                    <div style={{color:"#A3B7A7"}}>{t('Balance')}</div>
                                     <div style={{color: darkMode ? "#ffffff" : "#323742"}}>52045.003</div>
                                 </div>
                             </div>
@@ -23,7 +26,7 @@ const SwapLeftValue = () => {
                                 <span style={{color: darkMode ? "#ffffff" : "#323742"}}>100.00</span>
                                 </div>
                                 <div className="boxContainerLeftCenterShowBoxRight">
-                                    <span style={{fontSize:"10px", color:"#A3B7A7"}}>Max</span>
+                                    <span style={{fontSize:"10px", color:"#A3B7A7"}}>{t('Max')}</span>
                                     <img src={DAIimage} className="imageSmall" alt="" />
                                     <span style={{color: darkMode ? "#ffffff" : "#323742"}}>DAI</span></div>
                                 </div>

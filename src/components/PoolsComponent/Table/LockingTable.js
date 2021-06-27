@@ -1,69 +1,20 @@
-    import "../../components/PoolsOptionContainer/PoolsOptionContainer.css"
-    import "./Pools_Remove_Liquidity.css"
-    import React from 'react'
-    import Navbar from '../../components/Navbar'
-    import { Link } from 'react-router-dom';
-    import DAIimage from "../../images/DAIimage.png"
-    import { userData } from "../../dummyData";
-    import Chart from '../../components/PoolsComponent/Chart';
-    import { AiOutlineLeft } from "react-icons/ai";
-    import CurrencyName from '../../components/PoolsComponent/CurrencyName';
-    import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
-    import TotalValueLocked from '../../components/PoolsComponent/TotalValueLocked';
-    import PoolTopbar from '../../components/PoolsComponent/PoolTopbar';
-    // import { BiCheckboxChecked } from "react-icons/bi";
-    // import { VscQuestion } from "react-icons/vsc";
-    import "./Pools_Looking.css"
-    import TablePoolsOptionLeft from "../../components/PoolsComponent/Table/TablePoolsOptionLeft.js";
-import LockingTable from "../../components/PoolsComponent/Table/LockingTable";
+import React from 'react'
+import { Segment } from 'semantic-ui-react'
+import { BiCheckboxChecked } from "react-icons/bi";
+import { VscQuestion } from "react-icons/vsc";
+import DAIimage from "../../../images/DAIimage.png"
 
-    
-    const Pools_Looking = () => {
-        let darkMode = localStorage.getItem('theme')=== 'theme-dark'
-        return (
-            <div>
-                <Navbar/>
-                <div>
-                <div className="containerPoolsLocking" style={{backgroundColor: darkMode ? "#23252A" : "#F7F8FD"}}>
-                    <div className="containerLeftPoolsOption"></div>
-                    
-                    <div className="containerCenterPoolsOption">
-                        <div className="containerCenterHeaderPoolsOptionBox">   
-                            <div className="containerCenterHeaderPoolsOptionBoxLeft"> 
-                                <div className="BackLinkSpan">
-                                <Link to="/pools" className="BackLink">
-                                <AiOutlineLeft style={{paddingTop:"4px", marginLeft:"15px"}}/>
-                                Back
-                                </Link>
-                                </div>
-                            </div>                
-                            <div className="containerCenterHeaderPoolsOptionCenter" style={{color: darkMode ? "#ffffff" : "#323742"}}>Details</div>
-                            <div className="containerCenterHeaderPoolsOptionBoxRight"></div>
-                        </div>
-                       
-                       <div className="boxContainerPoolsOptionLocking" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                       {/* <div className="boxContainerPoolsOptionZZZ" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}> */}
-                        <div className="boxContainerLeftPoolsLocking" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                            <div style={{display:"flex", justifyContent:"center", flexDirection:"column"}} className="boxContainerLeftPoolsOptionTop">
-                                <CurrencyName/>
-                                <div className="boxContainerLeftPoolsOptionTopValuesSet">
-                                    <TotalValueLocked/>
-                                </div>
-                                <div style={{paddingLeft:"20px" ,paddingTop:"20px", paddingBottom:"10px"}} className="boxContainerLeftPoolsOptionTopValueName">Underlying Tokens</div>
-                                <span style={{paddingLeft:"20px"}}><UnderlyingTokens/></span>
-                            </div>
-                            <div className="boxContainerLeftPoolsOptionBottom">
-                            <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-                            </div>
-                        </div>
-    
-    
-                        <div className="boxContainerRightPoolsLocking" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                            <div className="boxContainerRightPoolsOptionTop" style={{flex:1}}>
+const LockingTable = () => {
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark'
+    return (
+        <div style={{padding:"30px", borderRadius:"25px"}}>
+            <Segment padded='very' textAlign='center' style={{padding:"15px", borderRadius:"25px"}}>
+            <div className="boxContainerRightPoolsLocking" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                            {/* <div className="boxContainerRightPoolsOptionTop">
                             <PoolTopbar/>
-                            </div>
+                            </div> */}
     
-                            <div className="boxContainerRightPoolsOptionCenter" style={{flex:5}}>
+                            <div className="boxContainerRightPoolsOptionCenter">
 
 
                             <div className="LockingHeader">Lock to Earn Rewards</div>
@@ -151,23 +102,9 @@ import LockingTable from "../../components/PoolsComponent/Table/LockingTable";
                         </div>
                         </div>
                         </div>
-                        
-                       {/* </div> */}
-                       </div>
-                    </div>
-                    <div className="containerRightPools"></div>
-                </div>
+            </Segment>
+        </div>
+    )
+}
 
-
-                <div className="tableResponsiveMobile">
-           <TablePoolsOptionLeft/>
-           <LockingTable/>
-           </div>
-
-            </div>
-            </div>
-        )
-    }
-    
-    export default Pools_Looking
-    
+export default LockingTable

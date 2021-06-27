@@ -1,15 +1,17 @@
 import React from 'react'
 import "./SwapRightValue.css"
 import DAIimage from "../../images/DAIimage.png"
+import { useTranslation } from 'react-i18next'
 
 const SwapRightValue = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
+    const { t } = useTranslation()
     return (
         <>
             <div className="boxContainerRightTop">
                             <div className="boxContainerRightTopHeader">
-                                <div className="boxContainerRightTopHeaderLeft" style={{color: darkMode ? "#ffffff" : "#5A6AF0"}}>
-                                    To
+                                <div className="boxContainerRightTopHeaderLeft" style={{color: darkMode ? "#ffffff" : "#5A6AF0", paddingTop:"15px"}}>
+                                {t('To')}
                                 </div>
                                 <div className="boxContainerRightTopHeaderRight"></div>
                             </div>

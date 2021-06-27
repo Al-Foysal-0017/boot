@@ -1,0 +1,19 @@
+{
+  "app_title": "Titre",
+  "language": "Langue",
+  "welcome_message": "Bienvenue",
+  "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo",
+  "logoName":"Botte",
+  "Swap":"Échanger",
+  "Pools":"Piscines",
+  "Governance":"Gouvernance",
+  "More":"Suite",
+  "Connect_Wallet":"Connecter le portefeuille",
+  "Swap_Using_Pools":"Échanger à l'aide de pools",
+  "From":"De",
+  "To":"À",
+  "Balance":"Équilibre",
+  "Max":"Max",
+  "ExRate":"Taux de change",
+  "InfiAppo":"Approbation infinie - faites confiance à ce contact pour toujours"
+}

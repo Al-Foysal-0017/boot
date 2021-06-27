@@ -54,11 +54,6 @@
   cursor: pointer;
 }
 
-/* .SidebarLink:hover{
-    color: #000;
-    transition: 0.2s ease-in-out;
-} */
-
 .SideBtnWrap{
   display: flex;
   justify-content: center;
@@ -66,10 +61,8 @@
 
 .SidebarRoute{
   border-radius: 50px;
-  /* background: #01bf71; */
   white-space: nowrap;
   padding: 16px 64px;
-  /* color: #010606; */
   font-size: 16px;
   outline: none;
   border: none;

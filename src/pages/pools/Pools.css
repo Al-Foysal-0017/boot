@@ -70,13 +70,58 @@
     padding-top: 35px;
     padding-bottom: 20px;
 }
-.boxContainerTopHeaderPools1{ display: flex; flex: 2.1; font-size: 15px; justify-content: center;}
-.boxContainerTopHeaderPools2{ display: flex; flex: 2.7; font-size: 15px; justify-content: center;}
-.boxContainerTopHeaderPools3{ display: flex; flex: 1.6; font-size: 15px; justify-content: center;}
-.boxContainerTopHeaderPools4{ display: flex; flex: 1.6; font-size: 15px; justify-content: center;}
-.boxContainerTopHeaderPools5{ display: flex; flex: 1.2; font-size: 15px; justify-content: center;}
-.boxContainerTopHeaderPools6{ display: flex; flex: 1.2; font-size: 15px; justify-content: center;}
-.boxContainerTopHeaderPools7{ display: flex; flex: 1.6; font-size: 15px; justify-content: center;}
+.boxContainerTopHeaderPools1{ 
+    display: flex; 
+    flex: 2.1; 
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;}
+.boxContainerTopHeaderPools2{ 
+    display: flex; 
+    flex: 2.7; 
+    font-size: 15px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;}
+.boxContainerTopHeaderPools3{ 
+    display: flex; 
+    flex: 1.6; 
+    font-size: 15px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.boxContainerTopHeaderPools4{ 
+    display: flex; 
+    flex: 1.6; 
+    font-size: 15px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.boxContainerTopHeaderPools5{ 
+    display: flex; 
+    flex: 1.2; 
+    font-size: 15px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.boxContainerTopHeaderPools6{ 
+    display: flex; 
+    flex: 1.2; 
+    font-size: 15px; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.boxContainerTopHeaderPools7{ 
+    display: flex; 
+    flex: 1.6; 
+    font-size: 15px; 
+    justify-content: center;
+}
 
 
 .boxContainerPoolsColumn1{ 
@@ -189,5 +234,59 @@
     .boxContainerPoolsColumn1{
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 951px){
+    .ResponsiveMobileFooter{
+        display: none;
+        margin-bottom: 25px;
+    }
+    .ResponsiveboxBottomPools{
+        display: none;
+    }
+    .tableResponsiveMobile{
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 950px){
+    .containerPools{
+        height: 250vh;
+    }
+    
+    .boxContainerPools{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+
+    .bottomResponsive{
+        padding: 20px;
+    }
+    .ResponsiveboxBottomPools{
+        width: 80%;
+        margin-top: 30px;
+        border: 1px solid #d8d9dd;
+        border-radius: 25px;
+    }
+
+
+    .containerLeftPools{
+        flex: 0;
+    }
+    
+    .containerRightPools{
+        flex: 0;
+    }
+    
+    .containerCenterPools{
+        flex: 12;
     }
 }

@@ -3,13 +3,13 @@
     color: #5A6AF0;
     font-weight: bold;
     align-self: center;
+    margin-top: 15px;
     margin-bottom: 25px;
 }
 .LockingRightCenter{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-self: center; */
 }
 .RightLockingTop{
     flex: 4;
@@ -32,9 +32,6 @@
 .RightLockingShowBox{
     border: 1px solid #5A6AF0;
     padding: 8px;
-    /* width: 100%;
-    max-width: 600px;
-    border-radius: 25px; */
     border-radius: 10px;
     font-size: 14px;
     padding-top: 10px;
@@ -43,7 +40,6 @@
     justify-content: space-around;
 }
 .RightLockingShowBoxDown{
-    /* border: 1px solid gray; */
     padding: 8px;
     width: 100%;
     max-width: 600px;
@@ -65,21 +61,15 @@
     flex-direction: column;
     width: 70%;
     max-width: 600px;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
-    
 }
 
 .LockingForm2Top{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 .LockingForm2Bottom{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 
@@ -92,6 +82,7 @@ button{
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 28px;
+    cursor: pointer;
 }
 .alignSelfCenter{
     align-self: center;
@@ -109,21 +100,19 @@ button{
 
 .containerPoolsLocking{
     display: flex;
-    /* padding-top: 800px; */
-    height: 210vh;
-
+    height: 190vh;
+    /* height: 490vh; */
 }
 .boxContainerRightPoolsOptionCenter{
     flex: 4;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
     max-height: 600px;
 }
 .boxContainerPoolsOptionLocking{
-    height: 1400px;
-    /* max-height: 220vh; */
+    height: 160vh;
+    /* height: 260vh; */
+    max-height: 1800px;
     width: 100%;
     max-width: 1200px;
     border-radius: 25px;
@@ -131,12 +120,13 @@ button{
     box-shadow: 0px 8px 8px #D8D8D8;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: 100px;
 }
 .boxContainerLeftPoolsLocking{
     flex: 4;
-    height: 1400px;
+    height: 160vh;
+    max-height: 1800px;
     width: 100%;
     max-width: 400px;
     border-radius: 25px;
@@ -145,31 +135,43 @@ button{
     display: flex;
     flex-direction: column;
     margin-top: 0px;
-    /* margin-left: px; */
-    /* box-shadow: 0px 8px 8px #D8D8D8; */
 }
 .boxContainerRightPoolsLocking{
     flex: 8;
-    height: 1398px;
+    height: 159.7vh;
+    /* height: 10vh; */
+    max-height: 1500px;
     width: 100%;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     margin-top: 0px;
-    /* box-shadow: 0px 8px 8px blue; */
 }
 
 
 
-.boxContainerPoolsOptionZZZ{
+/* .boxContainerPoolsOptionZZZ{
     height: 100%;
     max-height: 650px;
     width: 100%;
     max-width: 1200px;
     border-radius: 25px;
-    /* border: 0.5px solid #D8D8D8; */
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     align-items: center;
+} */
+
+
+.boxContainerRightPoolsOptionBottom{
+    max-height: 800px;
 }
+
+
+
+
+@media screen and (max-width: 950px){
+    .containerPoolsLocking{
+        display: none;
+    }
+ }

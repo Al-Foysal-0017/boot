@@ -2,7 +2,8 @@
     display: flex;
     height: 110vh;
 }
-
+/* boxContainerRightPoolsOptionTopLink */
+/* boxContainerRightPoolsOptionCenterListItem */
 .containerLeftPoolsOption{
     flex: 1;
 }
@@ -90,6 +91,7 @@
 }
 .boxContainerLeftPoolsOptionTop{
     flex: 7;
+    /* max-height: 410px; */
     max-height: 700px;
     padding-top: 40px;
     padding-left: 25px;
@@ -144,11 +146,11 @@
     padding-top: 30px;
     padding-left: 25px;
 }
-/* .boxContainerRightPoolsOptionTopLink{
-    border: 1px solid #d8d9dd;
-    display: inline-block;
-    border-radius: 5px;
-} */
+.boxContainerRightPoolsOptionTopLink{
+    /* border: 1px solid #d8d9dd; */
+    display: flex;  
+    flex-wrap: wrap;
+}
 .boxContainerRightPoolsOptionTopButton{
     border-radius: 5px;
     border: 1px solid #d8d9dd;
@@ -194,7 +196,8 @@
     border-radius: 15px;
     margin-bottom: 8px;
     max-width: 450px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    min-width: 250px;
 }
 .boxContainerRightPoolsOptionBottom{
     flex: 6;
@@ -306,4 +309,16 @@
     .HeroPPools{
     font-size: 32px;
     }
+}
+
+
+
+@media screen and (max-width: 950px){
+   .containerPoolsOption{
+       display: none;
+   }
+
+   .boxContainerRightPoolsOptionTopButton{
+       margin-top: 2px;
+   }
 }

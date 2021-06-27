@@ -1,70 +1,17 @@
-import "./Pools_Add_Liquidity.css"
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import { Link } from 'react-router-dom';
-import DAIimage from "../../images/DAIimage.png"
-import { userData } from "../../dummyData";
-import Chart from '../../components/PoolsComponent/Chart';
-import { AiOutlineLeft } from "react-icons/ai";
-import CurrencyName from '../../components/PoolsComponent/CurrencyName';
-import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
-import TotalValueLocked from '../../components/PoolsComponent/TotalValueLocked';
-import PoolTopbar from '../../components/PoolsComponent/PoolTopbar';
+import { Segment } from 'semantic-ui-react'
 import { BiCheckboxChecked } from "react-icons/bi";
 import { VscQuestion } from "react-icons/vsc";
-import TablePoolsOptionLeft from "../../components/PoolsComponent/Table/TablePoolsOptionLeft.js";
-import { Segment } from 'semantic-ui-react'
-import AddLiqTable from "../../components/PoolsComponent/Table/AddLiqTable";
+import DAIimage from "../../../images/DAIimage.png"
 
-const Pools_Add_Liquidity = () => {
+const AddLiqTable = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
     return (
-        <div>
-            <Navbar/>
-            <div>
-
-
-
-            <div className="containerPoolsOption" style={{backgroundColor: darkMode ? "#23252A" : "#F7F8FD"}}>
-                <div className="containerLeftPoolsOption"></div>
-                
-                <div className="containerCenterPoolsOption">
-                    <div className="containerCenterHeaderPoolsOptionBox">   
-                        <div className="containerCenterHeaderPoolsOptionBoxLeft"> 
-                            <div className="BackLinkSpan">
-                                <Link to="/pools" className="BackLink">
-                                <AiOutlineLeft style={{paddingTop:"4px", marginLeft:"15px"}}/>
-                                 Back
-                                </Link>
-                            </div>
-                        </div>                
-                        <div className="containerCenterHeaderPoolsOptionCenter" style={{color: darkMode ? "#ffffff" : "#323742"}}>Details</div>
-                        <div className="containerCenterHeaderPoolsOptionBoxRight"></div>
-                    </div>
-                   
-                   <div className="boxContainerPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                   <div className="boxContainerPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                    <div className="boxContainerLeftPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerLeftPoolsOptionTop">
-                            <CurrencyName/>
-                            <div className="boxContainerLeftPoolsOptionTopValuesSet">
-                                <TotalValueLocked/>
-                            </div>
-                            <div style={{paddingTop:"20px", paddingBottom:"10px"}} className="boxContainerLeftPoolsOptionTopValueName">Underlying Tokens</div>
-                            <UnderlyingTokens/>
-                        </div>
-                        <div className="boxContainerLeftPoolsOptionBottom">
-                        <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-                        </div>
-                    </div>
-                    <div className="boxContainerRightPoolsOption" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerRightPoolsOptionTop">
-                            <PoolTopbar/>
-                        </div>
-
-
+        <div style={{padding:"25px" ,backgroundColor: darkMode ? "#323742" : "#ffffff"}} >
+            <Segment padded='very' textAlign='center' style={{borderRadius:"25px", backgroundColor: darkMode ? "#464B58" : "#ffffff"}}>
+            <div className="boxContainerRightPoolsOption" style={{backgroundColor: darkMode ? "#464B58" : "#ffffff"}}>
                         <div className="boxContainerRightPoolsOptionCenter">
-                            <div className="boxContainerRightPoolsOptionCenterHeader">Currencies</div>
+                            <div className="boxContainerRightPoolsOptionCenterHeader" style={{marginTop:"30px"}}>Currencies</div>
                             <div className="boxContainerRightPoolsOptionCenterList">
                                 <div className="boxContainerRightPoolsOptionCenterListItem">
                                     <span style={{color: darkMode ? "#ffffff" : "#323742"}}>100.00</span>
@@ -134,32 +81,9 @@ const Pools_Add_Liquidity = () => {
                         </div>
                     </div>
 
-                   
-                    
-                    
-                   </div>
-                  
-                   </div>
-      
-                </div>
-          
-                <div className="containerRightPools"></div>
-            </div>
-           
-
-
-
-            <div className="tableResponsiveMobile">
-           <TablePoolsOptionLeft/>
-           <AddLiqTable/>
-           </div>
-
-
-
-           
-        </div>
+            </Segment>
         </div>
     )
 }
 
-export default Pools_Add_Liquidity
+export default AddLiqTable

@@ -3,9 +3,16 @@ import Navbar from '../../components/Navbar'
 import { BiChevronRightCircle } from "react-icons/bi";
 import "./Governance.css"
 import { Link } from 'react-router-dom';
+import { Grid } from 'semantic-ui-react';
+import { Form, Select } from 'semantic-ui-react'
 
 const Governance = () => {
-    let darkMode = localStorage.getItem('theme')=== 'theme-dark'
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark';
+    const Options = [
+        { key: 'm', text: 'One', value: 'one' },
+        { key: 'f', text: 'Two', value: 'two' },
+        { key: 'o', text: 'Three', value: 'three' },
+      ]
     return (
         <div>
             <Navbar/>
@@ -23,19 +30,19 @@ const Governance = () => {
                             <div className="HeaderOverview">Overview</div>
                             <div className="overViewItems">
                                 <div className="overViewItem">
-                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow1" style={{color: darkMode ? "#ffffff" : "#323742"}}>1,690,458.81 $BOOT</div>
                                     <div className="overViewItemRow2">Total $BOOT vote-locked</div>
                                 </div>
                                 <div className="overViewItem">
-                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow1" style={{color: darkMode ? "#ffffff" : "#323742"}}>1,690,458.81 $BOOT</div>
                                     <div className="overViewItemRow2">Total $BOOT vote-locked</div>
                                 </div>
                                 <div className="overViewItem">
-                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow1" style={{color: darkMode ? "#ffffff" : "#323742"}}>1,690,458.81 $BOOT</div>
                                     <div className="overViewItemRow2">Total $BOOT vote-locked</div>
                                 </div>
                                 <div className="overViewItem">
-                                    <div className="overViewItemRow1">1,690,458.81 $BOOT</div>
+                                    <div className="overViewItemRow1" style={{color: darkMode ? "#ffffff" : "#323742"}}>1,690,458.81 $BOOT</div>
                                     <div className="overViewItemRow2">Total $BOOT vote-locked</div>
                                 </div>
                             </div>
@@ -47,10 +54,10 @@ const Governance = () => {
                                     <div className="label">Add Lock</div>
                                     <div className="setTwoBox">
                                         <div className="setBox1">
-                                            <span>91.05</span>
-                                            <span>Max $BOOT</span>
+                                            <span style={{color: darkMode ? "#ffffff" : "#323742"}}>91.05</span>
+                                            <span style={{color: darkMode ? "#ffffff" : "#323742"}}>Max $BOOT</span>
                                         </div>
-                                        <div className="setBox2">$BOOT Balance: <span>525.97</span></div>
+                                        <div className="setBox2" style={{paddingTop: "8px"}}>$BOOT Balance: <span>525.97</span></div>
                                     </div>
                                     <button className="GovButton">Add</button>
                                 </div>
@@ -58,10 +65,10 @@ const Governance = () => {
                                     <div className="label">Add Lock</div>
                                     <div className="setTwoBox">
                                         <div className="setBox1">
-                                            <span>91.05</span>
-                                            <span>Max $BOOT</span>
+                                            <span style={{color: darkMode ? "#ffffff" : "#323742"}}>91.05</span>
+                                            <span style={{color: darkMode ? "#ffffff" : "#323742"}}>Max $BOOT</span>
                                         </div>
-                                        <div className="setBox2">$BOOT Balance: <span>525.97</span></div>
+                                        <div className="setBox2" style={{paddingTop: "8px"}}>$BOOT Balance: <span>525.97</span></div>
                                     </div>
                                     <button className="GovButton">Lock</button>
                                 </div>
@@ -69,18 +76,70 @@ const Governance = () => {
                         </div>
                     </div>
                     <div className="boxContainerRightGov" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerRightGovTop">
-                            Proposal 24
+                            <div className="boxContainerRightGovTop">
+                            <Grid columns='equal'>
+                                <Grid.Row>
+                                <Grid.Column></Grid.Column>
+                                <Grid.Column></Grid.Column>
+                                <Grid.Column></Grid.Column>
+                                {/* <Grid.Column></Grid.Column> */}
+                                <Grid.Column>
+                                    <button className="boxContainerRightGovTopButton">
+                                        <Link to="/governance-info" style={{color:"#fff"}}>
+                                        New Proposal
+                                        </Link>
+                                    </button>
+                                </Grid.Column>
+                                </Grid.Row>
+                                <Grid.Row>
+                                <Grid.Column>
+                                    <div className="boxContainerRightGovTopHeader" style={{color: darkMode ? "#ffffff" : "#323742"}}>
+                                        Proposal 24
+                                    </div>
+                                </Grid.Column>
+                                <Grid.Column></Grid.Column>
+                                <Grid.Column></Grid.Column>
+                                </Grid.Row>
+                            </Grid>
+                            </div>
+                        <div className="boxContainerRightGovCenter">
+                        <Form className="boxContainerRightGovCenterForm">
+                            <Form.Group widths='equal'>
+                            <Form.Field
+                                control={Select}
+                                options={Options}
+                                label={{ children: 'Status', htmlFor: 'form-select-control' }}
+                                placeholder='All'
+                                search
+                                searchInput={{ id: 'form-select-control' }}
+                            />
+                            <Form.Field
+                                control={Select}
+                                options={Options}
+                                label={{ children: 'Outcome', htmlFor: 'form-select-control' }}
+                                placeholder='All'
+                                search
+                                searchInput={{ id: 'form-select-control' }}
+                            />
+                            <Form.Field
+                                control={Select}
+                                options={Options}
+                                label={{ children: 'App', htmlFor: 'form-select-control' }}
+                                placeholder='All'
+                                search
+                                searchInput={{ id: 'form-select-control' }}
+                            />
+                            </Form.Group>
+                        </Form>
                         </div>
-                        <div className="boxContainerRightGovCenter"></div>
                         <div className="boxContainerRightGovBottom">
                             <div className="boxContainerRightGovBottomBox" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                                <button>Active</button>
-                                <div>Pool proxy: Commit new parameters for 0x3292.F9f88d, A100, new ...</div>
-                                <div>
-                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                                <button className="boxContainerRightGovBottomButton">Active</button>
+                                <div className="boxContainerRightGovBottomHeader" style={{color: darkMode ? "#ffffff" : "#323742"}}>Pool proxy: Commit new parameters for 0x3292.F9f88d, A100, new ...</div>
+                                <div className="boxContainerRightGovBottomBody" style={{color: darkMode ? "#ffffff" : "#323742"}}>
+                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text.
                                 </div>
-                                <div>05D:13H-33M:44S</div>
+                                <div className="boxContainerRightGovBottomFooter" style={{color: darkMode ? "#ffffff" : "#323742"}}>05D:13H-33M:44S</div>
                             </div>
                         </div>
 

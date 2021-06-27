@@ -8,6 +8,8 @@ import CurrencyName from '../../components/PoolsComponent/CurrencyName';
 import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
 import TotalValueLocked from '../../components/PoolsComponent/TotalValueLocked';
 import PoolTopbar from '../../components/PoolsComponent/PoolTopbar';
+import TablePoolsOptionLeft from "../../components/PoolsComponent/Table/TablePoolsOptionLeft.js";
+
 const Pools_Swap = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
     return (
@@ -65,6 +67,11 @@ const Pools_Swap = () => {
             </div>
             <div className="containerRightPools"></div>
         </div>
+
+        <div className="tableResponsiveMobile">
+           <TablePoolsOptionLeft/>
+           </div>
+
     </div>
     </div>
     )

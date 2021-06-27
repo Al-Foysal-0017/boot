@@ -1,0 +1,19 @@
+{
+  "app_title": "Title",
+  "language": "Language",
+  "welcome_message": "Welcome",
+  "days_since_release": "it's been {{number_of_days}} days since this video was released",
+  "logoName":"Boot",
+  "Swap":"Swap",
+  "Pools":"Pools",
+  "Governance":"Governance",
+  "More":"More",
+  "Connect_Wallet":"Connect Wallet",
+  "Swap_Using_Pools":"Swap Using Pools",
+  "From":"From",
+  "To":"To",
+  "Balance":"Balance",
+  "Max":"Max",
+  "ExRate":"Exchange rate",
+  "InfiAppo":"Infinite approval - trust this contact forever"
+}

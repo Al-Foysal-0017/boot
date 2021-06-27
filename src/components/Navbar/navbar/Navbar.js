@@ -1,48 +1,35 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React from 'react'
 import {FaBars} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import {useLocation} from 'react-router-dom'
 import LogoImg from "../../../images/logo1.png"
 import LogoImgDark from "../../../images/logoDark.png"
-import { FaRegMoon } from "react-icons/fa";
-import { ImSun } from "react-icons/im";
-import ReactLanguageSelect from 'react-languages-select';
+// import ReactLanguageSelect from 'react-languages-select';
 import 'react-languages-select/css/react-languages-select.css';
 import DarkMode from '../../DarkMode/DarkMode'
+import { useTranslation } from 'react-i18next'
+import Language from '../../../Language'
 
 const Navbar = ({toggle}) => {
     const {pathname} = useLocation();
-    
-    // const [darkMode, setDarkMode1] = useState(localStorage.getItem('theme')=== 'theme-dark' || null)
-    // const [darkMode, setDarkMode] = useState(localStorage.getItem('theme')=== 'theme-dark')
-
-     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
-    
-    //  const HandlDarkMode = () => {
-    //      if(localStorage.getItem('theme')=== 'theme-dark'){
-    //          setDarkMode1(false)
-    //      }
-    //      if(localStorage.getItem('theme')=== 'theme-light'){
-    //          setDarkMode1(true)
-    //      }
-    //  }
-    
-    //  useEffect(()=>{
-    //     HandlDarkMode()
-    //  },[darkMode, setDarkMode1])
-
+    let darkMode = localStorage.getItem('theme')=== 'theme-dark';
+    const { t } = useTranslation()
     return (
         <>
          <div className="Nav" style={{backgroundColor: darkMode ? "#323742" : "#fff"}}>
              <div className="NavbarContainer">
                  <div className="NavLogo">
+                 <Link to="/">
                  <div>
                      {darkMode?
                      <img src={LogoImgDark} className="logoImg" alt="" />:
                      <img src={LogoImg} className="logoImg" alt="" />}
                 </div>
-                 <div to='/' style={{color: darkMode ? "#ffffff" : "#323742"}}>Boot</div>
+                 </Link>
+                 <div  style={{color: darkMode ? "#ffffff" : "#323742"}}>
+                     <Link to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('logoName')}</Link>
+                </div>
                  </div>
                  <div className="MobileIcon" onClick={toggle} > 
                      <FaBars />
@@ -51,42 +38,42 @@ const Navbar = ({toggle}) => {
                  <div className="NavMenu">
                     {pathname === "/" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>Swap</Link>
+                    <Link className="NavLinks NavLinksActive" to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('Swap')}</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>Swap</Link>
+                        <Link className="NavLinks" to="/" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('Swap')}</Link>
                     </div>
                     }
 
                     {pathname === "/pools" || pathname === "/pools/swap" || pathname === "/pools/locking" || pathname === "/pools/add-liquidity" || pathname === "/pools/remove-liquidity" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>Pools</Link>
+                    <Link className="NavLinks NavLinksActive" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('Pools')}</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>Pools</Link>
+                        <Link className="NavLinks" to="/pools" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('Pools')}</Link>
                     </div>
                     }
 
-                    {pathname === "/governance" ?
+                    {pathname === "/governance" || pathname === "/governance-info" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/governance" style={{color: darkMode ? "#ffffff" : "#323742"}}>Governance</Link>
+                    <Link className="NavLinks NavLinksActive" to="/governance" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('Governance')}</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/governance" style={{color: darkMode ? "#ffffff" : "#323742"}}>Governance</Link>
+                        <Link className="NavLinks" to="/governance" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('Governance')}</Link>
                     </div>
                     }
 
 
                     {pathname === "/more" ?
                     <div className="NavItem">
-                    <Link className="NavLinks NavLinksActive" to="/more" style={{color: darkMode ? "#ffffff" : "#323742"}}>More</Link>
+                    <Link className="NavLinks NavLinksActive" to="/more" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('More')}</Link>
                     </div>
                     :
                     <div className="NavItem">
-                        <Link className="NavLinks" to="/more" style={{color: darkMode ? "#ffffff" : "#323742"}}>More</Link>
+                        <Link className="NavLinks" to="/more" style={{color: darkMode ? "#ffffff" : "#323742"}}>{t('More')}</Link>
                     </div>
                     }   
                  </div>
@@ -103,14 +90,15 @@ const Navbar = ({toggle}) => {
                     optionsSize={12}
                  />
                   */}
+                  <Language/>
 
                     <DarkMode/>
 
                  <div >
                      {darkMode? 
-                     <Link to="/connect-wallet" className="NavBtnLinkDark">Connect Wallet</Link>
+                     <Link to="/connect-wallet" className="NavBtnLinkDark">{t('Connect_Wallet')}</Link>
                        :
-                    <Link to="/connect-wallet" className="NavBtnLink">Connect Wallet</Link> }                    
+                    <Link to="/connect-wallet" className="NavBtnLink">{t('Connect_Wallet')}</Link> }                    
                  </div>
                  </div>
                  

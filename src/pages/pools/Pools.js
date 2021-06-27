@@ -6,6 +6,7 @@ import { BiChevronRightCircle } from "react-icons/bi";
 import CurrencyName from '../../components/PoolsComponent/CurrencyName';
 import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
 import DAIimage from "../../images/DAIimage.png"
+import Table from "../../components/PoolsComponent/Table/Table"
 
 
 const Pools = () => {
@@ -58,8 +59,8 @@ const Pools = () => {
                     </div>
                     <div className="boxContainerBottomPools" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
                         <div className="boxContainerPoolsColumn1">
-                            <button className="boxContainerLeftPoolsOptionTopButton" style={{color: darkMode ? "#fff" : "#5A6AF0", backgroundColor: darkMode ? "#5A6AF0" : "#fff"}}>WETH</button>
-                            <button className="boxContainerLeftPoolsOptionTopButton" style={{color: darkMode ? "#fff" : "#5A6AF0", backgroundColor: darkMode ? "#5A6AF0" : "#fff"}}>SETH</button>
+                            <button className="boxContainerLeftPoolsOptionTopButton" style={{color: darkMode ? "#fff" : "#5A6AF0", backgroundColor: darkMode ? "#323742" : "#fff"}}>WETH</button>
+                            <button className="boxContainerLeftPoolsOptionTopButton" style={{color: darkMode ? "#fff" : "#5A6AF0", backgroundColor: darkMode ? "#323742" : "#fff"}}>SETH</button>
                         </div>
                         <div className="boxContainerPoolsColumn2">
                             <div style={{display:"flex", textAlign:"center"}}>
@@ -102,8 +103,29 @@ const Pools = () => {
                         </span>
                     </div>
                     </div>
-                    
                    </div>
+
+                   
+
+
+                  <div className="tableResponsiveMobile">
+                  <Table/>
+                  </div>
+                   
+
+                    <div className="ResponsiveMobileFooter">
+                    <div style={{display:"flex", flex:"10.5"}}></div>
+                    <div style={{display:"flex", flex:"1.5"}} className="footerRight">
+                        <span className="footerRight1" style={{color: darkMode ? "#fff" : "#5A6AF0"}}>1</span>
+                        <span className="footerRight2" style={{color: darkMode ? "#fff" : "#5A6AF0"}}>2</span>
+                        <span style={{paddingRight:"20px", cursor: "pointer"}}>
+                            <Link to="/pools/add-liquidity">
+                            <BiChevronRightCircle style={{color: darkMode ? "#fff" : "#5A6AF0"}} fontSize="25px"/>
+                            </Link>
+                        </span>
+                    </div>
+                    </div>
+
                 </div>
                 <div className="containerRightPools"></div>
             </div>

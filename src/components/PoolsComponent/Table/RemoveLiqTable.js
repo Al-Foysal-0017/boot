@@ -1,67 +1,21 @@
-import "./Pools_Remove_Liquidity.css"
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import { Link } from 'react-router-dom';
-import DAIimage from "../../images/DAIimage.png"
-import { userData } from "../../dummyData";
-import Chart from '../../components/PoolsComponent/Chart';
-import { AiOutlineLeft } from "react-icons/ai";
-import CurrencyName from '../../components/PoolsComponent/CurrencyName';
-import UnderlyingTokens from '../../components/PoolsComponent/UnderlyingTokens';
-import TotalValueLocked from '../../components/PoolsComponent/TotalValueLocked';
-import PoolTopbar from '../../components/PoolsComponent/PoolTopbar';
+import { Segment } from 'semantic-ui-react'
 import { BiCheckboxChecked } from "react-icons/bi";
 import { VscQuestion } from "react-icons/vsc";
-import TablePoolsOptionLeft from "../../components/PoolsComponent/Table/TablePoolsOptionLeft.js";
-import RemoveLiqTable from "../../components/PoolsComponent/Table/RemoveLiqTable";
+import DAIimage from "../../../images/DAIimage.png"
 
-const Pools_Remove_Liquidity = () => {
+const RemoveLiqTable = () => {
     let darkMode = localStorage.getItem('theme')=== 'theme-dark'
     return (
-        <div>
-            <Navbar/>
-            <div>
-            <div className="containerPoolsRemoveLiq" style={{backgroundColor: darkMode ? "#23252A" : "#F7F8FD"}}>
-                <div className="containerLeftPoolsOption"></div>
-                
-                <div className="containerCenterPoolsOption">
-                    <div className="containerCenterHeaderPoolsOptionBox">   
-                        <div className="containerCenterHeaderPoolsOptionBoxLeft"> 
-                            <div className="BackLinkSpan">
-                            <Link to="/pools" className="BackLink">
-                            <AiOutlineLeft style={{paddingTop:"4px", marginLeft:"15px"}}/>
-                            Back
-                            </Link>
-                            </div>
-                        </div>                
-                        <div className="containerCenterHeaderPoolsOptionCenter" style={{color: darkMode ? "#ffffff" : "#323742"}}>Details</div>
-                        <div className="containerCenterHeaderPoolsOptionBoxRight"></div>
-                    </div>
-
-                   <div className="boxContainerPoolsOptionX" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                   {/* <div className="boxContainerPoolsOptionSSS" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}> */}
-                    <div className="boxContainerLeftPoolsRemoveLiq" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div style={{display:"flex", justifyContent:"center", flexDirection:"column"}} className="boxContainerLeftPoolsOptionTop">
-                            <CurrencyName/>
-                            <div className="boxContainerLeftPoolsOptionTopValuesSet">
-                                <TotalValueLocked/>
-                            </div>
-                            <div style={{paddingLeft:"20px" ,paddingTop:"20px", paddingBottom:"10px"}} className="boxContainerLeftPoolsOptionTopValueName">Underlying Tokens</div>
-                            <span style={{paddingLeft:"20px"}}><UnderlyingTokens/></span>
-                        </div>
-                        <div className="boxContainerLeftPoolsOptionBottom">
-                        <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-                        </div>
-                    </div>
-
-
-                    <div className="boxContainerRightPoolsRemoveLiq" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
-                        <div className="boxContainerRightPoolsOptionTop">
+        <div style={{padding:"30px", borderRadius:"25px"}}>
+            <Segment padded='very' textAlign='center' style={{padding:"15px", borderRadius:"25px"}}>
+            <div className="boxContainerRightPoolsRemoveLiq" style={{backgroundColor: darkMode ? "#323742" : "#ffffff"}}>
+                        {/* <div className="boxContainerRightPoolsOptionTop">
                         <PoolTopbar/>
-                        </div>
+                        </div> */}
 
                         <div className="boxContainerRightPoolsOptionCenter">
-                          <div className="PoolsRemLiqHeader">Share of Liquidity (%)</div>
+                          <div className="PoolsRemLiqHeader" style={{marginTop:"40px"}}>Share of Liquidity (%)</div>
                           <div className="boxContainerLeftCenter">
                             <div className="boxContainerLeftCenterShowBox" style={{backgroundColor: darkMode ? "#22262A" : "#ffffff"}}>
                                 <div className="boxContainerLeftCenterShowBoxLeft">
@@ -72,7 +26,7 @@ const Pools_Remove_Liquidity = () => {
                                 </div>
                             </div>
 
-                            <div className="PoolsRemLiqHeader" style={{paddingTop:"30px"}}>Currencies</div>
+                            <div className="PoolsRemLiqHeader" style={{marginTop:"100px"}}>Currencies</div>
                             <div className="boxContainerLeftCenter">
                             <div className="boxContainerLeftCenterShowBox" style={{borderColor:"#E5E5E5"}}>
                                 <div className="boxContainerLeftCenterShowBoxLeft">
@@ -170,22 +124,10 @@ const Pools_Remove_Liquidity = () => {
                            <button className="footerPoolOptionButton">Remove Liquidity</button>
                         </div>
                     </div>
-                    
-                   {/* </div> */}
-                    
-                   </div>
-                </div>
-                <div className="containerRightPools"></div>
-            </div>
 
-            <div className="tableResponsiveMobile">
-           <TablePoolsOptionLeft/>
-           <RemoveLiqTable/>
-           </div>
-
-        </div>
+            </Segment>
         </div>
     )
 }
 
-export default Pools_Remove_Liquidity
+export default RemoveLiqTable

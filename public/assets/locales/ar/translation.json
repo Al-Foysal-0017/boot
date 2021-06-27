@@ -1,0 +1,19 @@
+{
+  "app_title": "عنوان",
+  "language": "اللغة",
+  "welcome_message": "اهلا بكم",
+  "days_since_release": "لقد مرت {{number_of_days}} أيام على إصدار هذا الفيديو",
+  "logoName":"حذاء طويل",
+  "Swap":"تبديل",
+  "Pools":"حمامات السباحة",
+  "Governance":"الحكم",
+  "More":"أكثر",
+  "Connect_Wallet":"ربط المحفظة",
+  "Swap_Using_Pools":"المبادلة باستخدام المسابح",
+  "From":"من عند",
+  "To":"ل",
+  "Balance":"توازن",
+  "Max":"الأعلى",
+  "ExRate":"سعر الصرف",
+  "InfiAppo":"موافقة غير محدودة - ثق بجهة الاتصال هذه إلى الأبد"
+}

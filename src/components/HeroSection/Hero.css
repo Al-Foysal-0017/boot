@@ -40,6 +40,7 @@
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;
+  max-height: 800px;
 }
 
 .HeroContent{
